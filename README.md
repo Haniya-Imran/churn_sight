@@ -1,6 +1,6 @@
-# ChurnSight — Customer Churn Predictor
+# Retentra — Customer Churn Predictor
 
-**Explainable AI & Smart Retention Suggestions.** ChurnSight predicts how likely a customer is to leave, explains *why* with SHAP, and turns the explanation into prioritised, evidence-backed retention actions. It has a 3D landing page and a dashboard, needs no sign-in, and runs fully locally with no paid APIs.
+**Explainable AI & Smart Retention Suggestions.** Retentra predicts how likely a customer is to leave, explains *why* with SHAP, and turns the explanation into prioritised, evidence-backed retention actions. It has a 3D landing page and a dashboard, needs no sign-in, and runs fully locally with no paid APIs.
 
 Built by Nimra Imran.
 
@@ -226,7 +226,7 @@ Frontend (`frontend/.env`): `VITE_API_BASE_URL`, `VITE_API_TIMEOUT_MS`. No secre
 ## Troubleshooting
 | Problem | Fix |
 |---|---|
-| UI says "Can't reach the ChurnSight server" | Start the backend on port 8000, check `VITE_API_BASE_URL`, and restart `npm run dev` after editing `.env` |
+| UI says "Can't reach the Retentra server" | Start the backend on port 8000, check `VITE_API_BASE_URL`, and restart `npm run dev` after editing `.env` |
 | Browser CORS error | Add your frontend origin to `CHURNSIGHT_CORS_ORIGINS` |
 | `/health` returns 503 / "Missing model artifacts" | Run `python -m ml.download_data && python -m ml.train` |
 | `ModuleNotFoundError: ml` | Run uvicorn/pytest from the project root |

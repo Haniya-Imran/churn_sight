@@ -39,7 +39,7 @@ async function request<T>(path: string, validate: Validator<T>, init: RequestIni
   } catch {
     if (timedOut) throw new ApiError("timeout", "The server took too long to respond. Please try again.");
     if (signal?.aborted) throw new ApiError("aborted", "Request cancelled.");
-    throw new ApiError("network", "Can't reach the ChurnSight server. Check that the backend is running and try again.");
+    throw new ApiError("network", "Can't reach the Retentra server. Check that the backend is running and try again.");
   } finally {
     clearTimeout(timer);
     signal?.removeEventListener("abort", onAbort);

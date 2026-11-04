@@ -1,1 +1,1 @@
-"""ChurnSight machine-learning package: feature schema, training and SHAP explanations."""
+"""Retentra machine-learning package: feature schema, training and SHAP explanations."""

@@ -1,1 +1,1 @@
-"""ChurnSight FastAPI backend."""
+"""Retentra FastAPI backend."""

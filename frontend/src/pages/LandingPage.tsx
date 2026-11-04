@@ -36,7 +36,7 @@ export function LandingPage() {
             </span>
             <h1 id="hero-title">Know which customers will leave — and why.</h1>
             <p className="hero-sub">
-              ChurnSight scores each customer's chance of leaving, shows the exact factors behind the score with SHAP, and suggests practical
+              Retentra scores each customer's chance of leaving, shows the exact factors behind the score with SHAP, and suggests practical
               ways to keep them. No sign-up: open it and start.
             </p>
             <div className="hero-ctas">

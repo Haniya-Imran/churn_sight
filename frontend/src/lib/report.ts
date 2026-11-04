@@ -6,7 +6,7 @@ const esc = (s: unknown) =>
 
 export function reportFileName(label: string, ext: string): string {
   const safe = label.replace(/[^a-z0-9-]+/gi, "-").replace(/^-+|-+$/g, "").toLowerCase() || "customer";
-  return `churnsight-${safe}-${new Date().toISOString().slice(0, 10)}.${ext}`;
+  return `retentra-${safe}-${new Date().toISOString().slice(0, 10)}.${ext}`;
 }
 
 export function buildReportHtml(label: string, input: CustomerInput, r: PredictResponse, featureLabels: Record<string, string>): string {
@@ -30,11 +30,11 @@ export function buildReportHtml(label: string, input: CustomerInput, r: PredictR
           .join("")}</ul><em>Assumption:</em> ${esc(x.assumption)}</li>`,
     )
     .join("");
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>ChurnSight report — ${esc(label)}</title>
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Retentra report — ${esc(label)}</title>
 <style>body{font-family:system-ui,sans-serif;max-width:860px;margin:32px auto;padding:0 20px;color:#1A2340;line-height:1.5}
 h1{margin:0 0 4px}table{border-collapse:collapse;width:100%;margin:8px 0 24px}td,th{border-bottom:1px solid #d6dbea;padding:6px 8px;text-align:left;font-size:14px}
 .big{font-size:40px;font-weight:700}.up{color:#B4521A}.down{color:#2C3FA8}.muted{color:#4a5578;font-size:13px}li{margin-bottom:10px}</style></head><body>
-<h1>ChurnSight prediction report</h1><p class="muted">Customer: ${esc(label)} · Generated ${esc(new Date(r.generated_at).toLocaleString())} · Model: ${esc(
+<h1>Retentra prediction report</h1><p class="muted">Customer: ${esc(label)} · Generated ${esc(new Date(r.generated_at).toLocaleString())} · Model: ${esc(
     r.model.name,
   )} v${esc(r.model.version)}</p>
 <p class="big">${esc(pct(p.probability))} churn probability</p>

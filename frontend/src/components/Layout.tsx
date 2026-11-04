@@ -3,14 +3,14 @@ import { useEffect } from "react";
 
 export function Logo({ compact = false }: { compact?: boolean }) {
   return (
-    <Link to="/" className="logo" aria-label="ChurnSight home">
+    <Link to="/" className="logo" aria-label="Retentra home">
       <span className="logo-mark" aria-hidden="true">
         <svg viewBox="0 0 32 32" width="20" height="20">
           <path d="M7 21c2.5-6 5-8 7-8s3 2 8-5" fill="none" stroke="#fff" strokeWidth="2.8" strokeLinecap="round" />
           <circle cx="23" cy="8.5" r="2.6" fill="#F2803A" />
         </svg>
       </span>
-      {!compact && <span className="logo-text">ChurnSight</span>}
+      {!compact && <span className="logo-text">Retentra</span>}
     </Link>
   );
 }
@@ -38,7 +38,7 @@ export function Footer() {
   return (
     <footer className="site-footer container">
       <p>
-        <strong>ChurnSight</strong> · Customer Churn Predictor with explainable AI · Built by Nimra Imran
+        <strong>Retentra</strong> · Customer Churn Predictor with explainable AI · Built by Nimra Imran
       </p>
       <p className="muted">
         Model trained on the{" "}

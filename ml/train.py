@@ -1,4 +1,4 @@
-"""Train, compare, evaluate and save the ChurnSight churn model.
+"""Train, compare, evaluate and save the Retentra churn model.
 
 Run from the project root:
     python -m ml.train

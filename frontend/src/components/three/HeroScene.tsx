@@ -53,8 +53,8 @@ export function HeroScene({ analytics }: { analytics: Analytics | null }) {
   const topCustomer = a?.top_risk_customers?.[0];
 
   const label = a
-    ? `Illustration of the ChurnSight dashboard: churn rate ${pct(a.totals.churn_rate, 1)} across ${num(a.totals.customers)} customers.`
-    : "Illustration of the ChurnSight analytics dashboard.";
+    ? `Illustration of the Retentra dashboard: churn rate ${pct(a.totals.churn_rate, 1)} across ${num(a.totals.customers)} customers.`
+    : "Illustration of the Retentra analytics dashboard.";
 
   return (
     <div className="hero-fit" ref={ref} style={{ ["--fit" as string]: fit }}>

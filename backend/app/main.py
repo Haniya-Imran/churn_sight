@@ -93,7 +93,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         yield
 
     app = FastAPI(
-        title="ChurnSight API",
+        title="Retentra API",
         description="Customer churn prediction with SHAP explanations and retention suggestions.",
         version="1.0.0",
         lifespan=lifespan,

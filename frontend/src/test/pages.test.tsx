@@ -122,10 +122,10 @@ describe("predict page", () => {
   });
 
   it("shows a clear error when the backend is unreachable", async () => {
-    mocked.predict.mockRejectedValue(new ApiError("network", "Can't reach the ChurnSight server. Check that the backend is running and try again."));
+    mocked.predict.mockRejectedValue(new ApiError("network", "Can't reach the Retentra server. Check that the backend is running and try again."));
     renderAt("/predict");
     await userEvent.click(await screen.findByRole("button", { name: "High-risk example" }));
-    expect(await screen.findByRole("alert")).toHaveTextContent(/can't reach the churnsight server/i);
+    expect(await screen.findByRole("alert")).toHaveTextContent(/can't reach the retentra server/i);
     expect(screen.queryByText("SHAP explanation")).toBeNull();
     expect(screen.getByRole("button", { name: /try again/i })).toBeInTheDocument();
   });

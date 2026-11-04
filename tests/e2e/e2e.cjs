@@ -149,7 +149,7 @@ async function step(name, fn) {
     const f1 = path.join(dir, d1.suggestedFilename());
     await d1.saveAs(f1);
     const html = fs.readFileSync(f1, "utf8");
-    assert.match(html, /ChurnSight prediction report/);
+    assert.match(html, /Retentra prediction report/);
     assert.ok(html.includes(`${Math.round(manual.prediction.probability * 100)}% churn probability`));
     const [d2] = await Promise.all([page.waitForEvent("download"), page.getByRole("button", { name: /export json/i }).click()]);
     const f2 = path.join(dir, d2.suggestedFilename());
@@ -201,7 +201,7 @@ async function step(name, fn) {
     await page.goto(APP + "/predict", { waitUntil: "networkidle" });
     await page.route(API + "/predict", (route) => route.abort("connectionrefused"));
     await page.getByRole("button", { name: "High-risk example" }).click();
-    await page.getByText(/can't reach the churnsight server/i).waitFor();
+    await page.getByText(/can't reach the retentra server/i).waitFor();
     assert.equal(await page.locator(".orb-value").count(), 0);
     await page.unroute(API + "/predict");
     await page.getByRole("button", { name: /try again/i }).click();

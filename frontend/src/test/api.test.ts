@@ -45,7 +45,7 @@ describe("api client", () => {
     const err = await api.health().catch((e) => e);
     expect(err).toBeInstanceOf(ApiError);
     expect(err.kind).toBe("network");
-    expect(err.message).toMatch(/reach the ChurnSight server/);
+    expect(err.message).toMatch(/reach the Retentra server/);
   });
 
   it("rejects malformed success responses instead of showing them", async () => {
