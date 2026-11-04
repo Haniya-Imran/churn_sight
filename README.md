@@ -2,7 +2,7 @@
 
 **Explainable AI & Smart Retention Suggestions.** Retentra predicts how likely a customer is to leave, explains *why* with SHAP, and turns the explanation into prioritised, evidence-backed retention actions. It has a 3D landing page and a dashboard, needs no sign-in, and runs fully locally with no paid APIs.
 
-Built by Nimra Imran.
+Built by Haniya Imran.
 
 ---
 

@@ -38,7 +38,7 @@ export function Footer() {
   return (
     <footer className="site-footer container">
       <p>
-        <strong>Retentra</strong> · Customer Churn Predictor with explainable AI · Built by Nimra Imran
+        <strong>Retentra</strong> · Customer Churn Predictor with explainable AI · Built by Haniya Imran
       </p>
       <p className="muted">
         Model trained on the{" "}
